@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Set View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SetViewController" customModule="SetGameGraphical" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="zzI-aB-d8P">
+                                <rect key="frame" x="86" y="804" width="242" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wW1-ab-eNc">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="42"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <inset key="titleEdgeInsets" minX="2" minY="3" maxX="3" maxY="3"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Deal Cards"/>
+                                        <connections>
+                                            <action selector="dealButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="khN-lE-0ob"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPF-Uu-cgK">
+                                        <rect key="frame" x="122" y="0.0" width="120" height="42"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <inset key="titleEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="New Game"/>
+                                        <connections>
+                                            <action selector="newGameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0KN-Ds-2Cz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="FSs-cv-TjL"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score = 0 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgV-ag-70y">
+                                <rect key="frame" x="141.5" y="752" width="131.5" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="JuI-2t-cTJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="8Ay-O5-Cm1">
+                                <rect key="frame" x="16" y="60" width="382" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zzI-aB-d8P" secondAttribute="bottom" constant="16" id="9TQ-Is-us9"/>
+                            <constraint firstItem="8Ay-O5-Cm1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ByY-Fc-iwQ"/>
+                            <constraint firstItem="zzI-aB-d8P" firstAttribute="top" secondItem="CgV-ag-70y" secondAttribute="bottom" constant="16" id="EiN-QV-CUy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Ay-O5-Cm1" secondAttribute="trailing" constant="16" id="JfG-xT-cOI"/>
+                            <constraint firstItem="CgV-ag-70y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zz6-pT-YFr"/>
+                            <constraint firstItem="zzI-aB-d8P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jS2-1R-MKW"/>
+                            <constraint firstItem="8Ay-O5-Cm1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rid-eE-mgV"/>
+                            <constraint firstItem="CgV-ag-70y" firstAttribute="top" secondItem="8Ay-O5-Cm1" secondAttribute="bottom" constant="8" symbolic="YES" id="sls-rf-WQ1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardsContainerView" destination="8Ay-O5-Cm1" id="pfg-Ze-Iny"/>
+                        <outlet property="dealCardsButton" destination="wW1-ab-eNc" id="wl7-hR-vSW"/>
+                        <outlet property="newGameButton" destination="FPF-Uu-cgK" id="Uvb-Rf-otL"/>
+                        <outlet property="scoreLabel" destination="CgV-ag-70y" id="GYa-hm-TAo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123.18840579710145" y="50.223214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
